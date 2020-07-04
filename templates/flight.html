@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+          Flights
+{% endblock %}
+
+{% block body %}
+<h1>Details</h1>
+<ul>
+  <li>{{flight.origin}}</li>
+  <li>{{flight.destination}}</li>
+</ul>
+<h1>Passengers</h1>
+<ul>
+  {% for i in names %}
+  <li>{{i.name}}</li>
+  {% endfor %}
+</ul>
+<a href="{{url_for('flights')}}">Go back</a>
+
+
+
+
+
+{% endblock %}
